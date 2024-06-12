@@ -1,0 +1,10 @@
+.todo-complete {
+  text-decoration: line-through;
+}
+
+.round{
+  display:block;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}

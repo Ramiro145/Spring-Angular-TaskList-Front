@@ -1,0 +1,34 @@
+<div class="list-group">
+
+  <div *ngFor="let task of tasks; trackBy: trackByTaskId" class="list-group-item list-group-item-primary d-flex
+  justify-content-between align-items-center mb-2">
+    <div>
+        <div class="d-flex ustify-content-between ">
+          <button
+          class="btn btn-info btn-sm p-1 round"
+          (click)="toggleItem(task)"
+          >
+            <i class="bi bi-toggles"></i>
+          </button>
+          <!-- span used for space -->
+          <span class="m-1"></span>
+          <h4 class="ml-2" [ngClass]="{'todo-complete':task.completed}">{{task.title}}</h4>
+        </div>
+        <span>
+          {{task.description}}
+        </span>
+    </div>
+    <!-- span used for space -->
+    <span class="m-3"></span>
+    <div class="d-grid gap-2 col-3">
+      <button class="btn btn-danger mb-2 btn-sm">
+        <i class="bi bi-trash"></i>
+      </button>
+      <button class="btn btn-primary btn-sm">
+        <i class="bi bi-pencil"></i>
+      </button>
+  </div>
+  </div>
+
+
+</div>

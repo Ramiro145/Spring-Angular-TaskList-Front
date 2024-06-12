@@ -1,6 +1,9 @@
 # AngularSpringList
 
+Spring boot REST API with PostgreSQL as the database and Angular with bootstrap5 in the frontend
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.3.
+
 
 ## Development server
 

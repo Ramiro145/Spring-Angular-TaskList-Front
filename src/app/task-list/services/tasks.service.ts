@@ -30,6 +30,7 @@ export class TasksService {
 
 
   public updateTask(task:Task):Observable<Task>{
+    console.log(task)
     if(!task.id) throw new Error("Task id is required");
     return this.http.put<Task>(`${this.baseUrl}/task/${task.id}`,task);
   }

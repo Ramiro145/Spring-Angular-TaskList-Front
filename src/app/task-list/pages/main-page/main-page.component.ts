@@ -2,6 +2,7 @@ import { Component, EventEmitter, Output, ViewChild } from '@angular/core';
 import { TasksService } from '../../services/tasks.service';
 import { Task } from '../../interfaces/task.interface';
 import { ListComponent } from '../../components/list/list.component';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'task-list-main-page',
@@ -21,11 +22,25 @@ export class MainPageComponent {
   title = 'Spring API - Todo List';
 
 
+  public showPost(postedTask:Task){
+    console.log(postedTask)
+    Swal.fire(
+      {
+        title: postedTask.title,
+        text: 'Posted succesfully!',
+        color:'#3085d6',
+        icon:'success',
+        confirmButtonText:'Ok'
+      }
+    )
+  }
+
   onNewTask(task:Task){
 
-    this.tasksService.saveTask(task).subscribe((task)=>{
+    this.tasksService.saveTask(task).subscribe((id)=>{
       //we trigger this function after subscribing
       this.listComponent.ngOnInit();
+      this.showPost(task);
     });
 
 

@@ -19,7 +19,8 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
     CommonModule,
     TaskListRoutingModule,
     FormsModule,
-    SweetAlert2Module
+    SweetAlert2Module,
+
   ],
   exports:[
     ListComponent,

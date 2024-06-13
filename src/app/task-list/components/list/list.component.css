@@ -8,3 +8,11 @@
   width: 30px;
   border-radius: 50%;
 }
+
+.warn-text{
+  border-radius: 10px;
+}
+
+textarea{
+  resize: none;
+}

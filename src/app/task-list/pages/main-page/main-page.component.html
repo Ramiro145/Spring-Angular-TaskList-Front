@@ -7,13 +7,14 @@
 
     <div class="col-sm-4 mb-5">
 
-      <task-list-add-task></task-list-add-task>
+      <task-list-add-task (onNewTask)="onNewTask($event)" ></task-list-add-task>
 
     </div>
 
     <div class="col-sm-8">
 
-      <task-list-list></task-list-list>
+      <task-list-list >
+      </task-list-list>
 
     </div>
   </div>

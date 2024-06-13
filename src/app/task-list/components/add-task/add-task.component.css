@@ -1,3 +1,9 @@
 textarea{
   resize: none;
 }
+
+.warn-text{
+  border-radius: 10px;
+}
+
+

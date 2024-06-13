@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { environments } from '../../../environments/environments';
 import { Observable } from 'rxjs';
 import { Task } from '../interfaces/task.interface';
+import { ResponseMessage } from '../interfaces/responsemessage.interface';
 
 @Injectable({providedIn: 'root'})
 export class TasksService {
@@ -17,7 +18,12 @@ export class TasksService {
 
 
   //delete
+
   //save
+  public saveTask(task:Task):Observable<Task>{
+    return this.http.post<Task>(`${this.baseUrl}/task`,task);
+  }
+
   //get task para modal
 
 
@@ -36,6 +42,10 @@ export class TasksService {
     return this.http.put<Task>(`${this.baseUrl}/task/${task.id}`,updatedTask);
   }
 
+  public deleteTask(id?:number):Observable<ResponseMessage>{
 
+    return this.http.delete<ResponseMessage>(`${this.baseUrl}/task/${id}`);
+
+  }
 
 }

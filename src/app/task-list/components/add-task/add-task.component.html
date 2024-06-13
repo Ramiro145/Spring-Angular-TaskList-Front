@@ -1,18 +1,19 @@
 <h4>Add Task</h4>
-    <form class="row" >
+    <form class="row" (ngSubmit)="emitTask()">
 
       <input
       type="text"
-
+      [(ngModel)] ="task.title"
       name="Title"
       class="form-control mb-2"
       placeholder="Title"
-
+      required
       >
 
       <textarea
       type="text"
       rows="5"
+      [(ngModel)] = "task.description"
       name="description"
       class="form-control mb-2"
       placeholder="description"
@@ -25,6 +26,11 @@
         Add
       </button>
 
-      <!-- <pre>{{character | json}}</pre> -->
-
   </form>
+
+  <div *ngIf="isLength"  class="warn-text bg-warning mt-3 p-2 d-flex ">
+    <i class="bi bi-exclamation-circle"></i>
+    <span class="m-1"></span>
+    <p class="mb-0"><b>Title is required</b></p>
+  </div>
+

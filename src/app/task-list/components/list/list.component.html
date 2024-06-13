@@ -21,10 +21,16 @@
     <!-- span used for space -->
     <span class="m-3"></span>
     <div class="d-grid gap-2 col-3">
-      <button class="btn btn-danger mb-2 btn-sm">
+      <button
+      (click)="deleteTask(task)"
+      class="btn btn-danger mb-2 btn-sm"
+      >
         <i class="bi bi-trash"></i>
       </button>
-      <button class="btn btn-primary btn-sm">
+      <button
+      (click)="editTask()"
+      class="btn btn-primary btn-sm"
+      >
         <i class="bi bi-pencil"></i>
       </button>
   </div>

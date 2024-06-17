@@ -1,6 +1,6 @@
 # AngularSpringList
 
-Frontend with Angular and bootstrap5 for a Spring boot REST API with PostgreSQL as the database <b>
+Frontend with Angular and bootstrap5 for a Spring boot REST API with PostgreSQL as the [database](https://github.com/Ramiro145/Spring-Angular-TaskList-Backend) <b>
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.3.
 
